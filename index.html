@@ -25,7 +25,44 @@
     <!-- Overriding personal style -->
     <link href="css/style.css" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    
+  <script type="text/javascript">
+   function visibility_on(id) {
+        var e = document.getElementById(id+"_text");
+        if(e.style.display == 'none')
+            e.style.display = 'block';
+        var e = document.getElementById(id+"_img");
+        if(e.style.display == 'none')
+            e.style.display = 'block';
+   }
+   function visibility_off(id) {
+        var e = document.getElementById(id+"_text");
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+        var e = document.getElementById(id+"_img");
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+   }
+   function toggle_visibility(id) {
+       var e = document.getElementById(id+"_text");
+       if(e.style.display == 'inline')
+          e.style.display = 'block';
+       else
+          e.style.display = 'inline';
+       var e = document.getElementById(id+"_img");
+       if(e.style.display == 'inline')
+          e.style.display = 'block';
+       else
+          e.style.display = 'inline';
+   }
+   function toggle_vis(id) {
+       var e = document.getElementById(id);
+       if (e.style.display == 'none')
+           e.style.display = 'inline';
+       else
+           e.style.display = 'none';
+   }
+</script>
+  
   </head>
 
   <body>
@@ -97,8 +134,22 @@ Prior to my stint at Harvard, I received my PhD in Computer Science from Stanfor
 For more details, here is my <a href="./Hima_Lakkaraju_CV.pdf">CV</a> and here is a <a href="./one-pager.pdf">one-pager</a> about my research.
 </p>
 <p>
-NOTE: I am <font color="red">looking for motivated students</font> who are broadly interested in machine learning and its applications to health care and criminal justice. If you are excited about this line of research and would like to work with me, please drop me an email with a brief description of your research interests and your CV.
-</p>		  
+<font color="red">NOTE:</font> I am looking for motivated <font color="red">undergraduate and graduate students, and postdocs</font> who are broadly interested in machine learning and its applications to health care and criminal justice. 
+	If you are excited about this line of research and would like to work with me, please <a href="javascript:toggle_vis('contact')">read this</a> before contacting me. 
+</p>		  <div id="contact" style="display:none"> 
+                  Thank you for your interest in joining my lab! I am recruiting undergraduate, masters, and PhD students as well as postdoctoral fellows this year. <br>
+		  If you are interested in a <i>postdoc</i> position, please send me an email with your CV and a brief description of your research interests. Please use the subject line <font color="red">"Postdoctoral Fellowship Application"</font> in your email. <br>
+		  If you are a current or admitted <i>undergraduate or masters or PhD student at Harvard</i>, please send me an email with your CV and a brief description of your research interests. Please use the subject line <font color="red">"Harvard Student -- Interested in Collaboration"</font> in your email. <br>
+                  <br>
+		  If you are not (yet!) a student at Harvard and would like to pursue a PhD under my guidance, <font color="red">please apply to BOTH the following PhD programs and write my name in your statements and applications</font>: 
+		  <ol>
+			  <li> <a href="https://gsas.harvard.edu/programs-of-study/all/business-administration">PhD Program in Technology and Operations Management</a> at Harvard Business School. 
+			  </li>
+			  <li> <a href="https://www.seas.harvard.edu/computer-science/graduate-programs/how-apply">PhD Program in Computer Science</a> at Harvard SEAS.
+			  </li>	  
+		  </ol>
+		  Unfortunately, I will not be able to respond to any other individual emails about internships or admissions to masters or PhD programs at this time. 
+		  </div>
 		  </font>
 
 	  
@@ -188,23 +239,26 @@ NOTE: I am <font color="red">looking for motivated students</font> who are broad
       <h4>Preprints</h4>
       <font size="3">
       <ul>
-          <li>
-              <p> "How can we fool LIME and SHAP?": Adversarial Attacks on Post hoc Explanation Methods. <br />
-                  Dylan Slack, Sophie Hilgard, Emily Jia, Sameer Singh, Himabindu Lakkaraju. <br />
-                  <a href="https://arxiv.org/pdf/1911.02508.pdf" class="btn btn-xs btn-default">pdf</a>
-              </p>
-          </li>
-              <p> "How do I fool you?": Manipulating User Trust via Misleading Black Box Explanations. <br />
-                  Himabindu Lakkaraju, Osbert Bastani. <br />
-                  <a href="https://arxiv.org/pdf/1911.06473.pdf" class="btn btn-xs btn-default">pdf</a>
-              </p>
-          <li>
-          </li>
+          
       </ul>
 
       <h4>Publications</h4>    
       <font size="3">
       <ul>
+          <li>
+              <p> Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods. <br />
+                  Dylan Slack, Sophie Hilgard, Emily Jia, Sameer Singh, Himabindu Lakkaraju. <br />
+		  <i></i>AAAI/ACM Conference on Artificial Intelligence, Ethics, and Society (AIES), 2020.<br />
+                  <a href="https://arxiv.org/pdf/1911.02508.pdf" class="btn btn-xs btn-default">pdf</a>
+              </p>
+          </li>
+	  <li>
+              <p> "How do I fool you?": Manipulating User Trust via Misleading Black Box Explanations. <br />
+                  Himabindu Lakkaraju, Osbert Bastani. <br />
+		  <i></i>AAAI/ACM Conference on Artificial Intelligence, Ethics, and Society (AIES), 2020.<br />
+                  <a href="https://arxiv.org/pdf/1911.06473.pdf" class="btn btn-xs btn-default">pdf</a>
+	      </p>  
+          </li>
         <li>
         <p>Faithful and Customizable Explanations of Black Box Models.<br />
            Himabindu Lakkaraju, Ece Kamar, Rich Carauna, Jure Leskovec.<br />
